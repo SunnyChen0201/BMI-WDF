@@ -8,15 +8,24 @@
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
         <StackPanel Orientation="Horizontal">
-            <TextBox>身高:</TextBox>
-            <TextBlock Width="376" Height="32"></TextBlock>
-            <Button Click="Button_Click" Content="清除" Height="35"/>
+            <TextBlock FontSize="20">身高:</TextBlock>
+            <TextBox Width="376" Height="32" x:Name="HeightBox" TextChanged="HeightBox_TextChanged" >5</TextBox>
+            <Button Click="Button_Click" Content="清除" FontSize="20" x:Name="button" Height="35"/>
+            
             </StackPanel>
+        <Slider x:Name="HeightBar" Minimum="0" Maximum="200" Width="482" ValueChanged="HeightBar_ValueChanged" TickFrequency="1" IsSnapToTickEnabled="True"></Slider>
+       
+
         <StackPanel Orientation="Horizontal">
-            <TextBox>身高:</TextBox>
-            <TextBlock Width="376" Height="32"></TextBlock>
-            <Button Click="Button_Click" Content="清除" Height="35"/>
+
+            <TextBlock FontSize="20">體重:</TextBlock>
+            <TextBox  Width="376" Height="32" x:Name="kgbox">5</TextBox>
+            <Button FontSize="20" Click="Button_Click" Content="清除" Height="35"/>
             </StackPanel>
-        <TextBlock ></TextBlock>
+        <Slider x:Name="kgBar" Minimum=" 0" Maximum="100" Width="482" ValueChanged="kgBar_ValueChanged" TickFrequency="1" IsSnapToTickEnabled="True"></Slider>
+        
+        
+        <TextBlock TextAlignment="Center" Margin="50,100,50,0" FontSize="50" Foreground="Black" Text="0" x:Name="Ans" ></TextBlock>
+        
     </StackPanel>
 </Window>
